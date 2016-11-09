@@ -56,12 +56,13 @@
         new L.TileLayer.TDT.VectorAnno().addTo(mymap);*/
 
 //L.geoJSON(data2).addTo(mymap);
-var osmb = new OSMBuildings(mymap).load();
+var osmb = new OSMBuildings(mymap);
          osmb.click(function(e) {
  console.log(e.feature);
 
  
 });
+          osmb.set(data);
  osmb.add(data2);
 
 
